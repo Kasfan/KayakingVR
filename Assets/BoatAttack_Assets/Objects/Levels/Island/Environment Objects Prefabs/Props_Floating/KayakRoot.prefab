@@ -50,7 +50,7 @@ MonoBehaviour:
   volume: 1
   voxelResolution: 1
   centerOfMass: {x: 0, y: 0, z: 0}
-  waterLevelOffset: -0.5
+  waterLevelOffset: -0.35
   colliders:
   - {fileID: 0}
 --- !u!1001 &6401600783272712156
