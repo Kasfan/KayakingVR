@@ -81,6 +81,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6762618338345986545}
   - component: {fileID: 6882902517975777356}
+  - component: {fileID: 1233673730663708203}
   m_Layer: 0
   m_Name: Teleportation Anchor
   m_TagString: Untagged
@@ -198,7 +199,58 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2913018540097670847}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
+        m_MethodName: SetParent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 697433105476825292}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_TeleportAnchorTransform: {fileID: 6762618338345986545}
+--- !u!54 &1233673730663708203
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2272099568322286137}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3152906480739656216
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479590575388031291}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7083809638889286406}
   - component: {fileID: 3134397656103840611}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: kayak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697433105476825292}
   - component: {fileID: 2913018540097670847}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Kayak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,9 +433,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6925089277265173118}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 10
+  m_Drag: 0.2
+  m_AngularDrag: 0.7
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -439,9 +491,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 697433105476825292}
     m_Modifications:
+    - target: {fileID: 673812918444115170, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      propertyPath: m_ReinitializeDynamicAttachEverySingleGrab
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 944645337040030435, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192436324207369441, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929364839666132411, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426158514660622493, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3597637275367145269, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
       propertyPath: m_Name
       value: KayakPaddleRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597637275367145269, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683020653935556267, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121725541991447330, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6161034409703461300, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
       propertyPath: m_LocalPosition.x
@@ -483,11 +567,69 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7248937235879017848, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448893108054416729, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000514187149006661, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2192436324207369441, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 8386705696519730638}
+    - targetCorrespondingSourceObject: {fileID: 2929364839666132411, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1308466995735979532}
   m_SourcePrefab: {fileID: 100100000, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+--- !u!1 &1078610605404577221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2929364839666132411, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+  m_PrefabInstance: {fileID: 2760934637022378110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1308466995735979532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078610605404577221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a17012788664f58ae6189d76226fadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterTrigger: {fileID: 0}
+  dragForce: 200
+  kayakBody: {fileID: 2913018540097670847}
+--- !u!1 &4052630896350684319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2192436324207369441, guid: 5f235a061dc1dda40a0f653512346475, type: 3}
+  m_PrefabInstance: {fileID: 2760934637022378110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8386705696519730638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052630896350684319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a17012788664f58ae6189d76226fadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterTrigger: {fileID: 0}
+  dragForce: 200
+  kayakBody: {fileID: 2913018540097670847}
 --- !u!4 &8345358451091646922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6161034409703461300, guid: 5f235a061dc1dda40a0f653512346475, type: 3}

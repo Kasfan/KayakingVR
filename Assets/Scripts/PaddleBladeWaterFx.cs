@@ -76,7 +76,7 @@ namespace KayakingVR
             }
                 
             splashAudioFx.PlayOneShot(splashAudioFx.clip, size);
-            Debug.Log($"size: {size}; velocity: {velocity3dFiltered};");
+            //Debug.Log($"size: {size}; velocity: {velocity3dFiltered};");
         }
 
         private Vector3 GetWaterLevelPosition()
