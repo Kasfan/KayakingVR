@@ -1,18 +1,21 @@
-﻿using KayakingVR.Utils;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace KayakingVR
 {
+    [AddComponentMenu("KayakingVR/PaddleBladeWaterFx")]
     public class PaddleBladeWaterFx: MonoBehaviour
     {
         [SerializeField] 
+        [Tooltip("Trigger collider of the water")]
         private Collider waterTrigger;
         
         [SerializeField] 
+        [Tooltip("Splash effect when the padded touches the water")]
         private ParticleSystem splashFx;
         
-        [SerializeField] 
+        [SerializeField]
+        [Tooltip("Audio splash effect when the padded touches the water")]
         private AudioSource splashAudioFx;
         
         [SerializeField]
@@ -20,12 +23,13 @@ namespace KayakingVR
         public AnimationCurve splashForce =  AnimationCurve.Linear(0, 0, 10, 1);
 
         [SerializeField] 
+        [Tooltip("Water foam effect when the padded is in the water")]
         private ParticleSystem foamFx;
 
-        private LowPassFilter lowPassFilter;
         private float velocity3dFiltered;
         private Vector3 prevPosition;
         private Transform mTransform;
+        
         private void Awake()
         {
             mTransform = transform;

@@ -1,17 +1,20 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace KayakingVR
 {
+    [AddComponentMenu("KayakingVR/PaddleBladePropulsionController")]
     public class PaddleBladePropulsionController: MonoBehaviour
     {        
         [SerializeField] 
+        [Tooltip("Trigger collider of the water")]
         private Collider waterTrigger;
 
         [SerializeField] 
+        [Tooltip("Multiplier of a drag force that the paddle blade moves through the water")]
         private float dragForce = 50f;
 
-        [SerializeField] 
+        [SerializeField]
+        [Tooltip("Rigidbody of the kayak. The script uses force, so the 'kayakBody' can't be kinematic")]
         private Rigidbody kayakBody;
 
         private Vector3 movementCounter = Vector3.zero;
@@ -63,8 +66,8 @@ namespace KayakingVR
             propulsionForce.z = -1f * propulsionForce.z;
             propulsionForce.y = 0; // ignore up vector, because the kayak moves in a plane space
             
-            Debug.Log($"Force: {propulsionForce}");
             kayakBody.AddForceAtPosition(propulsionForce, GetWaterLevelPosition());
+            //Debug.Log($"Force: {propulsionForce}");
         }
         
         private void OnTriggerExit(Collider other)
